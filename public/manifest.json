@@ -1,0 +1,36 @@
+{
+  "short_name": "Slang translate",
+  "name": "Slang translate",
+  "icons": {
+    "16": "favicon.ico",
+    "48": "logo192.png",
+    "128": "logo512.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "file://*/",
+    "http://*/",
+    "https://*/"
+  ],
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Slang translate"
+  },
+  "web_accessible_resources": ["contents.js","test.css"]
+    ,
+    "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at"
+      "all_frames": true,
+      "css" : ["/Users/chaejiyun/Desktop/newslang/slang-ce/src/tooltip.css"],
+      "js": ["/Users/chaejiyun/Desktop/newslang/slang-ce/src/contents.js" ]
+    }
+  ]
+}
